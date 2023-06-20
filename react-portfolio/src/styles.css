@@ -1,0 +1,19 @@
+
+/*This container divides the page to 2 horizontal sections,
+the left one being the sidebar, right one holding everything else,
+including floating header and footer*/
+
+.toplevel-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* This is to give the element the 
+some properties of a button*/ 
+.div-button {
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

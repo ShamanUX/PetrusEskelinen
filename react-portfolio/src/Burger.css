@@ -1,0 +1,20 @@
+.burger-implementation {
+    background-color: green !important;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.menu-button-container {
+    max-height: max-content;
+    max-width: max-content;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: aqua;
+}
+
+.menuIcon {
+    width: 40px;
+    height: 40px;
+}
