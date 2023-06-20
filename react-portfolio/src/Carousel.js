@@ -3,6 +3,8 @@ import {useSpringCarousel} from 'react-spring-carousel';
 
 export default function Carousel() {
     const {carouselFragment} = useSpringCarousel({
+        itemsPerSlide: 2,
+        withLoop: true,
         items: [
             {
                 id: 'item-1',

@@ -1,6 +1,6 @@
 import './styles.css';
 import './Burger.css';
-import Home from './Home';
+import Home from './Page';
 
 import React, {useState, useEffect} from 'react';
 import {useSpring, animated } from 'react-spring';
