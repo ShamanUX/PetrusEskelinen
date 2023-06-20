@@ -8,6 +8,9 @@ including floating header and footer*/
     flex-direction: row;
 }
 
+.page-container{
+}
+
 /* This is to give the element the 
 some properties of a button*/ 
 .div-button {
@@ -16,4 +19,12 @@ some properties of a button*/
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+header {
+    overflow-x: hidden;
+}
+
+.header-content{
+    overflow-x: hidden;
 }
