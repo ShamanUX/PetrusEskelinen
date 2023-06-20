@@ -16,7 +16,7 @@ function Burger(props) {
     const initialSidebarWidth ="0px";
     const expandedSidebarWidth ="200px";
     const [ springs, api] = useSpring(() => ({  
-        from: {borderRadius: "0% 50% 0% 0%", width: "0px"}, 
+        from: {borderRadius: "0% 50% 0% 0%", minWidth: "0px"}, 
     }))
     const [ linkSprings, linksApi] = useSpring(() => ({  
         from: {opacity: 0}, 
@@ -37,12 +37,11 @@ function Burger(props) {
                 config: {
                     easing: easings.easeInCirc,
                     duration: 750
-                    
                 }
               });
             api.start({
-                from: {width: "0px"},
-                to: {width: "200px"},
+                from: {minWidth: "0px"},
+                to: {minWidth: "200px"},
                 config: {
                     
                 }
@@ -54,8 +53,8 @@ function Burger(props) {
             })
         } else {
             api.start ({
-                from: {borderRadius: "0%", width: "200px"},
-                to: {borderRadius: "0% 50% 0% 0%", width: "0px"}
+                from: {borderRadius: "0%", minWidth: "200px"},
+                to: {borderRadius: "0% 50% 0% 0%", minWidth: "0px"}
             })
             linksApi.start({
                 from: {opacity: 1},

@@ -6,9 +6,13 @@ including floating header and footer*/
 .toplevel-container{
     display: flex;
     flex-direction: row;
+    overflow-x: clip;
 }
 
 .page-container{
+    display: block;
+    overflow: hidden;
+    min-width: 100vw;
 }
 
 /* This is to give the element the 

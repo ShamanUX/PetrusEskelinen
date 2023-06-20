@@ -12,18 +12,18 @@ function Home() {
     const burgerComponent = useRef(null)
     const handleBurgerClick = () => {
         api.start({
-            from: {x: 0},
-            to: {x: 0}
+            from: {transfrom: "translateX(0px)"},
+            to: {transfrom: "translateX(400px)"}
         })
     }
     const [ springs, api] = useSpring(() => ({  
-        from: {x: 0}
+        from: {transfrom: "translateX(0px)"}
     }))
 
     return (
         // toplevel-container, a row-flex, allows the burger to work as intended 
         <div className='toplevel-container'>
-            <Burger clickFunction={handleBurgerClick} style={{position: "sticky"}}/>
+            <Burger clickFunction={handleBurgerClick}/>
             <animated.div className='page-container' style={{...springs}}>
                 <header>
                     <div className='header-content'>
