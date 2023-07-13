@@ -8,6 +8,7 @@ import { easings } from '@react-spring/web'
 
 import { RxHamburgerMenu as MenuIcon } from 'react-icons/rx';
 import { TfiClose as CloseIcon } from 'react-icons/tfi';
+import { Link } from 'react-router-dom';
 
 
 function Burger(props) {
@@ -26,7 +27,6 @@ function Burger(props) {
     const menuButtonClick = () => {
 
         setBurgerClicked(!burgerClicked);
-        props.clickFunction()
     }
 
     useEffect( () => {
@@ -74,8 +74,8 @@ function Burger(props) {
 
             <animated.div className="sidebar-container" style={{...linkSprings}}>
                 <ul>
-                    <li>About me</li>
-                    <li>CV</li>
+                    <li><Link to="/">Projects</Link></li>
+                    <li><Link to="/resume">Resume</Link></li>
                     <li>Projects</li>
                 </ul>
             </animated.div>

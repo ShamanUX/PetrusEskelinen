@@ -2,35 +2,44 @@ import './AnimatedSection.css'
 import {useSpring, animated} from 'react-spring'
 import {useEffect, useRef, useState} from 'react';
 import { InView, defaultFallbackInView, useInView } from 'react-intersection-observer';
+import { easings } from '@react-spring/web'
+import rajatonCollage from './images/Rajatontaidecollage.png' 
 
 
-export default function AnimatedSection() 
+export default function AnimatedSection(props) 
 {
     
+
     const [ springs, api] = useSpring(() => ({  
-        from: {opacity: 0}
+        from: {x:0, opacity: 0}
     }))
     
-    
- 
     const handleVisibilityChange = (inView) => {
         if (inView) {
-            api.start({
-                from: {opacity: 0},
-                to: {opacity: 1},
-                config: {duration: 1000}
-            })
+            api.start(
+                {
+                    from: {x: -50, opacity: 0},
+                    to: {x: 0, opacity: 1},
+                    delay: props.delay,
+                    config: {
+                        duration: 500,
+                        easing: easings.easeInCubic
+                    }
+                }
+            )
         } 
     }
     
-    const { ref: sectionRef, inView: sectionIsVisible } = useInView({
-        threshold: 0,
+    const { ref: sectionRef, inView } = useInView({
+        threshold: 0.25,
         onChange: handleVisibilityChange,
+        triggerOnce: true,
       });
 
     return(
-        <div className='section-container' ref={sectionRef} >
-            <animated.h1 style={{...springs}}>title that should animate</animated.h1>
-        </div>
+        <animated.div className='section-container'  style={{...springs}}  ref={sectionRef} >
+            <animated.h1>{props.title}</animated.h1>
+            <img src={props.image} style={{width: "80%"}}></img>
+        </animated.div>
     )
 }

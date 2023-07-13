@@ -9,30 +9,13 @@ import { useInView } from 'react-intersection-observer';
 
 
 function Page(props) {
-    const handleBurgerClick = () => {
-        api.start({
-            from: {},
-            to: {}
-        })
-    }
-    const [ springs, api] = useSpring(() => ({  
-        from: {}
-    }));
-    
-
-
     return (
         // toplevel-container, a row-flex, allows the burger to work as intended 
-        <div className='toplevel-container'>
-            
-            <Burger clickFunction={handleBurgerClick}/>
-            <animated.div className='page-container' style={{...springs}}>
+            <animated.div className='page-container'>
                 <div>
                  {props.pagebody}
                 </div>
-            </animated.div>
-        </div>
-        
+            </animated.div>     
     );
 }
 

@@ -13,7 +13,8 @@ including floating header and footer*/
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    min-width: 100vw;
+    width: 100%;
+    padding: 60px;
 }
 
 /* This is to give the element the 
@@ -28,7 +29,6 @@ some properties of a button*/
 
 header {
     overflow-x: hidden;
-    
 }
 
 .header-content{

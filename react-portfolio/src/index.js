@@ -1,14 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
+import Resume from './Resume';
 import App from './App';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
+import Burger from './Burger';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <React.StrictMode>
-    <Home />
+    <BrowserRouter>
+      <div className='toplevel-container'>
+        <Burger/>
+        <div className='page-container'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
+          </Routes>
+        </div>
+        
+      </div>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
