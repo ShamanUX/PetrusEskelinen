@@ -24,16 +24,7 @@ export default function Resume()
                 Figma and user testing, and of course a fundamental understanding of full-stack development.
             </p>
             <h2> Technologies </h2>
-            <div className="logoList">
-                <AnimatedBlock delay={200} source={reactlogo}/>
-                <AnimatedBlock delay={250} source={webdev}/>
-                <AnimatedBlock delay={300} source={figma}/>
-                <AnimatedBlock delay={350} source={unity}/>
-                <AnimatedBlock delay={400} source={node}/>
-                <AnimatedBlock delay={450} source={sql}/>
-                <AnimatedBlock delay={500} source={csharp}/>
-                <AnimatedBlock delay={550} source={python}/>
-            </div>
+            
         </div>
     )
 }
