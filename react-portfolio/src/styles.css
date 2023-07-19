@@ -1,23 +1,5 @@
 
-/*This container divides the page to 2 horizontal sections,
-the left one being the sidebar, right one holding everything else,
-including floating header and footer*/
-
-.toplevel-container{
-    display: flex;
-    flex-direction: row;
-    overflow-x: clip;
-}
-
-.page-container{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-    padding: 60px;
-}
-
-/* This is to give the element the 
+/* This is to give an element the 
 some properties of a button*/ 
 .div-button {
     cursor: pointer;
@@ -26,23 +8,6 @@ some properties of a button*/
     -webkit-user-select: none;
     -ms-user-select: none;
     height: 100%;
-}
-
-header {
-    overflow-x: hidden;
-}
-
-.header-content{
-    overflow-x: hidden;
-}
-
-header{
-    min-height: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-
 }
 
 body {

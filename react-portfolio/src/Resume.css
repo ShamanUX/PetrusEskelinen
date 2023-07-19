@@ -1,0 +1,36 @@
+.page-body {
+    padding: 60px;
+}
+
+.jobsection{
+    background: linear-gradient(to right, #0b8107 75%, rgba(0, 0, 0, 0) );
+    padding: 1px 15px 10px 15px;
+    margin: 0;
+    max-width: 60%;
+}
+
+.jobsection p, h3
+ {
+    max-width: 90%;
+}
+
+.job-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.logoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .jobsection {
+        max-width: 100%;
+        background: linear-gradient(45deg, #0b8107 50%, #0b8107c5 90%, #0b8107c5 );
+    }
+}

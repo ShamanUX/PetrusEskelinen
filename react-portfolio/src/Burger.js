@@ -37,7 +37,7 @@ function Burger(props) {
                 to: {borderRadius: "0% 0% 0% 0%"},
                 config: {
                     easing: easings.easeInCirc,
-                    duration: 750
+                    duration: 500
                 }
               });
             api.start({

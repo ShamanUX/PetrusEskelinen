@@ -12,17 +12,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
-    <BrowserRouter>
-      <div className='toplevel-container'>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Burger/>
-        <div className='page-container'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
           </Routes>
-        </div>
-        
-      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

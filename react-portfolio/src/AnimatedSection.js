@@ -33,7 +33,7 @@ export default function AnimatedSection(props)
     }
     
     const { ref: sectionRef, inView } = useInView({
-        threshold: 1,
+        threshold: props.threshold,
         onChange: handleVisibilityChange,
         triggerOnce: true,
       });

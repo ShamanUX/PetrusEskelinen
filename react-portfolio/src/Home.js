@@ -4,6 +4,7 @@ import Carousel from "./Carousel";
 import  EmblaCarousel  from './EmblaCarousel';
 import AnimatedBlock from './AnimatedBlock';
 import App from './SlickSlider.js'
+import { useRef } from 'react';
 
 import AnimatedSection from "./AnimatedSection";
 import rajatonCollage from "./images/Rajatontaidecollage.png"
@@ -18,42 +19,65 @@ import sql from './images/sql.png'
 import node from './images/nodejs-1-logo.png'
 import figma from './images/Figma-1-logo.png'
 import reactlogo from  './images/reactlogo.svg';
+import portrait from './images/pe1.jpg'
+import downarrow from './images/icons/down-arrow.png'
 
 const OPTIONS = { loop: true, dragFree: true,}
 const AUTOPLAYOPTIONS = {delay: 2000}
-const SLIDE_COUNT = 8
+const SLIDE_COUNT = 9
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 export default function Home() {
+    const projectRef = useRef(null);
+
+    const executeScroll = () => projectRef.current.scrollIntoView({ behavior: "smooth" })
+
     return(
             <div>
                 <header>
                     <div className='header-content'>
                         <h1> User-friendly software development & design </h1>
                         <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/>
+                        <div className='bio-container'>
+                            <img className="portrait" src={portrait}/>
+                            <div className='portrait-items'>
+                                <h2> I'm Petrus, and I warmly welcome you to my portfolio!</h2>
+                                <div className='button-and-arrow'>
+                                    <button onClick={executeScroll}>Check out my projects! </button>
+                                    <img src={downarrow}/>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
                     </div>
                 </header>
                 
-                <div className="section-grid">
+                <div className="section-grid" ref={projectRef}>
                     <AnimatedSection 
                         title="Webpage development & design for Rajaton Taide -festival"
-                        delay={200}
+                        delay={0}
                         image={rajatonCollage}
+                        threshold={0.5}
                     />
                     <AnimatedSection 
                         title="UI dashboard design for a resource management solution" 
-                        delay={700}
+                        delay={500}
                         image={dashboardCollage}
+                        threshold={0.5}
                     />
                     <AnimatedSection 
                         title="BarrelRoll: 2D space shooter"
                         delay={200}
                         video={barrelrollDemo}
+                        threshold={0.3}
+
                     />
                     <AnimatedSection 
                         title="SoundScape: VR musical playground"
                         delay={700}
                         video={soundscapeDemo}
+                        threshold={0.3}
                     />
                 </div>
             </div>
