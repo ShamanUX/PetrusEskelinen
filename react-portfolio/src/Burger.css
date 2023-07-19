@@ -1,7 +1,7 @@
 .burger-implementation {
     text-align: center;
     border-radius: 50%;
-    height: 100vh;
+    height: 100%;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -34,12 +34,14 @@
     flex-direction: row;
     position: absolute;
     left: 20px;
+    height: 40px;
 }
 
 .link {
     text-decoration: none;
     color: white;
     padding: 0px;
+    margin: 0;
 }
 
 .link:visited {

@@ -25,6 +25,7 @@ some properties of a button*/
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    height: 100%;
 }
 
 header {

@@ -78,11 +78,11 @@ function Burger(props) {
                 <animated.div className="sidebar-container" style={{...linkSprings}}>
                     <AnimatedBlock link={
                         <Link  to="/" className='link' onClick={() => {menuButtonClick()} }>
-                             <h2>Projects</h2>
+                             <h2 className='link'>Projects</h2>
                         </Link>}/>
                     <AnimatedBlock delay={100} link={
                         <Link to="/resume" className='link' onClick={() => {menuButtonClick()} }>
-                            <h2>Resume</h2>
+                            <h2 className='link'>Resume</h2>
                         </Link>}/>
                 </animated.div>
             </div>
