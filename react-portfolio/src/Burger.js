@@ -9,6 +9,7 @@ import { easings } from '@react-spring/web'
 import { RxHamburgerMenu as MenuIcon } from 'react-icons/rx';
 import { TfiClose as CloseIcon } from 'react-icons/tfi';
 import { Link } from 'react-router-dom';
+import AnimatedBlock from './AnimatedBlock';
 
 
 function Burger(props) {
@@ -60,25 +61,31 @@ function Burger(props) {
                 from: {opacity: 1},
                 to: {opacity: 0},
                 config: {
-                    duration: 100
+                    duration: 300
                 }
             })
         }
     })
 
     return (
-        <animated.div className="burger-implementation" style={{...springs}}>
-            <span className="menu-button-container div-button" onClick={() => {menuButtonClick()} }>
-                {burgerClicked ? <CloseIcon className='menuIcon'/> : <MenuIcon className='menuIcon'/>}
-            </span>
+        <animated.div className="burger-implementation" style={{}}>
 
-            <animated.div className="sidebar-container" style={{...linkSprings}}>
-                <ul>
-                    <li><Link to="/">Projects</Link></li>
-                    <li><Link to="/resume">Resume</Link></li>
-                    <li>Projects</li>
-                </ul>
-            </animated.div>
+            <div className="menu-items">
+                <span className="menu-button-container div-button" onClick={() => {menuButtonClick()} }>
+                    {burgerClicked ? <CloseIcon className='menuIcon'/> : <MenuIcon className='menuIcon'/>}
+                </span>
+    
+                <animated.div className="sidebar-container" style={{...linkSprings}}>
+                    <AnimatedBlock link={
+                        <Link  to="/" className='link' onClick={() => {menuButtonClick()} }>
+                             <h2>Projects</h2>
+                        </Link>}/>
+                    <AnimatedBlock delay={100} link={
+                        <Link to="/resume" className='link' onClick={() => {menuButtonClick()} }>
+                            <h2>Resume</h2>
+                        </Link>}/>
+                </animated.div>
+            </div>
 
             
         </animated.div>       
