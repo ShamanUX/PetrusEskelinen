@@ -1,17 +1,25 @@
 .embla {
     overflow: hidden;
+    background-color: #f0f3f3e0 
   }
   .embla__container {
     display: flex;
+    gap: 20px;
+ 
   }
   .embla__slide {
-    flex: 0 0 calc(100% / 4); 
+    flex: 0 0 calc(100% / 6); 
     min-width: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
   .embla__slide__img {
     display: block;
-    height: var(--slide-height);
+    height: 80px;
     width: 100%;
-    max-height: 80px;
+    min-height: 80px;
     object-fit: contain;
+
+    padding: 5px;
   }

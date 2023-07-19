@@ -1,4 +1,10 @@
 .section-container{
     min-height: 200px;
     background-color: rgba(127, 255, 212, 0.349);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
