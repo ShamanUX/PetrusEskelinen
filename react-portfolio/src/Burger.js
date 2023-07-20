@@ -23,15 +23,23 @@ function Burger(props) {
     const [ linkSprings, linksApi] = useSpring(() => ({  
         from: {opacity: 0}, 
     }))
-    const [sidebarWidth, setSidebarWidth] = useState(initialSidebarWidth);
+    const [sidebarEnabled, setSidebarEnabled] = useState({display: 'none'});
 
     const menuButtonClick = () => {
 
         setBurgerClicked(!burgerClicked);
+        if (!burgerClicked) {
+            setSidebarEnabled({display: 'flex'})
+        } else {
+            setSidebarEnabled({display: 'none'})
+        }
     }
 
     useEffect( () => {
-        if  (burgerClicked) {
+        if  (burgerClicked) { // Burger is now closed
+
+            
+
             api.start({
                 from: {borderRadius: "0% 50% 0% 0%"},
                 to: {borderRadius: "0% 0% 0% 0%"},
@@ -52,7 +60,7 @@ function Burger(props) {
                 to: {opacity: 1},
                 delay: 200
             })
-        } else {
+        } else { // Burger is now enabled
             api.start ({
                 from: {borderRadius: "0%", minWidth: "200px"},
                 to: {borderRadius: "0% 50% 0% 0%", minWidth: "0px"}
@@ -75,7 +83,7 @@ function Burger(props) {
                     {burgerClicked ? <CloseIcon className='menuIcon'/> : <MenuIcon className='menuIcon'/>}
                 </span>
     
-                <animated.div className="sidebar-container" style={{...linkSprings}}>
+                <animated.div className="sidebar-container" style={{...linkSprings, ...sidebarEnabled}}>
                     <AnimatedBlock link={
                         <Link  to="/" className='link' onClick={() => {menuButtonClick()} }>
                              <h2 className='link'>Projects</h2>

@@ -8,16 +8,18 @@ import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import Burger from './Burger';
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
+ 
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Burger/>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/resume" element={<Resume />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes> 
     </BrowserRouter>
   </React.StrictMode>
 );

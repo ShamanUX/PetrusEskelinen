@@ -1,12 +1,12 @@
 .burger-implementation {
     text-align: center;
-    border-radius: 50%;
     height: 100%;
+    position: fixed;
+    /*
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    width: 0px;
-
+    */
 }
 
 .sidebar-container {
@@ -32,7 +32,7 @@
 .menu-items {
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: fixed !important;
     top: 20px;
     left: 20px;
     height: 40px;

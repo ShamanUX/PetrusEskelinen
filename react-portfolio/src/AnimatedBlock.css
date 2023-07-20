@@ -21,3 +21,9 @@
     background-color: aqua;
     height: 100%;
 }
+
+@media (max-width: 468px) {
+    .logoBlock {
+        flex: 1 1 100px;
+    }
+}
