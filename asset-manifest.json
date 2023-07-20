@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PetrusEskelinen/static/css/main.edd0e78f.css",
-    "main.js": "/PetrusEskelinen/static/js/main.9b719cee.js",
+    "main.css": "/PetrusEskelinen/static/css/main.2c809262.css",
+    "main.js": "/PetrusEskelinen/static/js/main.b3333d96.js",
     "static/js/787.a2cb61a6.chunk.js": "/PetrusEskelinen/static/js/787.a2cb61a6.chunk.js",
     "static/media/Soundscape demo.mp4": "/PetrusEskelinen/static/media/Soundscape demo.65323bd96158f04e7bcd.mp4",
     "static/media/Barrelroll demo.mp4": "/PetrusEskelinen/static/media/Barrelroll demo.21ece90dd4ec9905824f.mp4",
@@ -9,6 +9,7 @@
     "static/media/pe1.jpg": "/PetrusEskelinen/static/media/pe1.49a1d0a9093d1084f937.jpg",
     "static/media/EarthPeopleCollage.png": "/PetrusEskelinen/static/media/EarthPeopleCollage.9691e93b88686beedfe5.png",
     "static/media/Rajatontaidecollage.png": "/PetrusEskelinen/static/media/Rajatontaidecollage.ea3683e6b5df4b5bf86e.png",
+    "static/media/ThesisFrontpage.png": "/PetrusEskelinen/static/media/ThesisFrontpage.263041a577c9b161fb80.png",
     "static/media/Python-Logo.png": "/PetrusEskelinen/static/media/Python-Logo.dda157c0b79e49325772.png",
     "static/media/c-sharp logo.png": "/PetrusEskelinen/static/media/c-sharp logo.7f7159aad7bc573d9ddf.png",
     "static/media/nodejs-1-logo.png": "/PetrusEskelinen/static/media/nodejs-1-logo.4b7f1d6307d04c0fee01.png",
@@ -18,12 +19,12 @@
     "static/media/sql.png": "/PetrusEskelinen/static/media/sql.ba628df4785bc11af809.png",
     "static/media/reactlogo.svg": "/PetrusEskelinen/static/media/reactlogo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/PetrusEskelinen/index.html",
-    "main.edd0e78f.css.map": "/PetrusEskelinen/static/css/main.edd0e78f.css.map",
-    "main.9b719cee.js.map": "/PetrusEskelinen/static/js/main.9b719cee.js.map",
+    "main.2c809262.css.map": "/PetrusEskelinen/static/css/main.2c809262.css.map",
+    "main.b3333d96.js.map": "/PetrusEskelinen/static/js/main.b3333d96.js.map",
     "787.a2cb61a6.chunk.js.map": "/PetrusEskelinen/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edd0e78f.css",
-    "static/js/main.9b719cee.js"
+    "static/css/main.2c809262.css",
+    "static/js/main.b3333d96.js"
   ]
 }
