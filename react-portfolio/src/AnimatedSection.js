@@ -40,11 +40,11 @@ export default function AnimatedSection(props)
 
     return(
         <animated.div className='section-container'  style={{...springs}}  ref={sectionRef} >
-            <animated.h1>{props.title}</animated.h1>
+            <animated.h1 className={'section-text'}>{props.title}</animated.h1>
 
             <div className='media-container'>
                 {props.image ? 
-                    <img src={props.image} className='section-media' style={{}}></img>
+                    <img src={props.image} className='section-media' ></img>
                     :
                     null
                 }   

@@ -61,12 +61,17 @@ export default function Home() {
                     
                     <div className ="page-body">
                         <div className="section-grid" ref={projectRef}>
-                            <AnimatedSection 
-                                title="Webpage development & design for Rajaton Taide -festival"
-                                delay={0}
-                                image={rajatonCollage}
-                                threshold={0.5}
-                            />
+                            <div>
+                                <div class="section-info">
+                                    <h1> title </h1>
+                                </div>
+                                <AnimatedSection 
+                                    title="Webpage development & design for Rajaton Taide -festival"
+                                    delay={0}
+                                    image={rajatonCollage}
+                                    threshold={0.5}
+                                />
+                            </div>
                             <AnimatedSection 
                                 title="UI dashboard design for a resource management solution" 
                                 delay={500}

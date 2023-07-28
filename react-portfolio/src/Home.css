@@ -1,12 +1,17 @@
 .section-grid{
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px; 
+    justify-content: center;
+
 }
 
 .page-body {
-    padding: 100px;
+
+}
+
+.section-info {
+    
 }
 
 .bio-container {
