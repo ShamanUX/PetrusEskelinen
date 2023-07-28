@@ -42,8 +42,8 @@ export default function Home() {
                     <header>
                         
                         <div className='header-content'>
-                            <h1> User-friendly software development & design </h1>
-                            <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/>
+                            <h1 style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
+                            { /* <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/> */ }
                             <div className='bio-container'>
                                 <img className="portrait" src={portrait}/>
                                 <div className='portrait-items'>
@@ -59,47 +59,49 @@ export default function Home() {
                         </div>
                     </header>
                     
-                    <div className="section-grid" ref={projectRef}>
-                        <AnimatedSection 
-                            title="Webpage development & design for Rajaton Taide -festival"
-                            delay={0}
-                            image={rajatonCollage}
-                            threshold={0.5}
-                        />
-                        <AnimatedSection 
-                            title="UI dashboard design for a resource management solution" 
-                            delay={500}
-                            image={dashboardCollage}
-                            threshold={0.5}
-                        />
-                        <AnimatedSection 
-                            title="Earthpeople: Gamified app for sustainability"
-                            delay={200}
-                            image={earthPeopleCollage}
-                            threshold={0.3}
-                        />
-                        <AnimatedSection 
-                            title="Thesis: Learnability Evaluation of Glue VR app"
-                            delay={700}
-                            image={thesisFrontpage}
-                            threshold={0.3}
-                        />
-                        <AnimatedSection 
-                            title="BarrelRoll: 2D space shooter"
-                            delay={200}
-                            video={barrelrollDemo}
-                            threshold={0.3}
-                        />
-                        <AnimatedSection 
-                            title="SoundScape: VR musical playground"
-                            delay={700}
-                            video={soundscapeDemo}
-                            threshold={0.3}
-                        />
-                        
-                        
+                    <div className ="page-body">
+                        <div className="section-grid" ref={projectRef}>
+                            <AnimatedSection 
+                                title="Webpage development & design for Rajaton Taide -festival"
+                                delay={0}
+                                image={rajatonCollage}
+                                threshold={0.5}
+                            />
+                            <AnimatedSection 
+                                title="UI dashboard design for a resource management solution" 
+                                delay={500}
+                                image={dashboardCollage}
+                                threshold={0.5}
+                            />
+                            <AnimatedSection 
+                                title="Earthpeople: Gamified app for sustainability"
+                                delay={200}
+                                image={earthPeopleCollage}
+                                threshold={0.3}
+                            />
+                            <AnimatedSection 
+                                title="Thesis: Learnability Evaluation of Glue VR app"
+                                delay={700}
+                                image={thesisFrontpage}
+                                threshold={0.3}
+                            />
+                            <AnimatedSection 
+                                title="BarrelRoll: 2D space shooter"
+                                delay={200}
+                                video={barrelrollDemo}
+                                threshold={0.3}
+                            />
+                            <AnimatedSection 
+                                title="SoundScape: VR musical playground"
+                                delay={700}
+                                video={soundscapeDemo}
+                                threshold={0.3}
+                            />
+                            
+                            
+                        </div>
                     </div>
-                </div>
+                    </div>
             </>
     )
 }

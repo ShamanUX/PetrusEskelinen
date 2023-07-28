@@ -3,11 +3,24 @@
     background-color: rgba(127, 255, 212, 0.349);
     border-radius: 20px;
     padding: 20px;
-    flex: 1 1 calc(50% - 80px);
+    flex: 1 1 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 400px;
+}
+
+.media-container {
+    flex-shrink: 1;
+    max-height: 80%;
+}
+
+.section-media {
+
+   max-height: 100%;
+   max-width: 100%;
 }
 
 @media (max-width: 500px) {

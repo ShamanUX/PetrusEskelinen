@@ -5,6 +5,10 @@
     gap: 20px; 
 }
 
+.page-body {
+    padding: 100px;
+}
+
 .bio-container {
     flex-grow: 1;
     display: flex;

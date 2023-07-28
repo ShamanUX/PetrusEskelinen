@@ -85,12 +85,12 @@ function Burger(props) {
     
                 <animated.div className="sidebar-container" style={{...linkSprings, ...sidebarEnabled}}>
                     <AnimatedBlock link={
-                        <Link  to="/" className='link' onClick={() => {menuButtonClick()} }>
-                             <h2 className='link'>Projects</h2>
+                        <Link  to="/" className='link-element' onClick={() => {menuButtonClick()} }>
+                             <div className='link-container' style={{height: '100%'}}><h2 className='link-text'>Projects</h2></div>
                         </Link>}/>
                     <AnimatedBlock delay={100} link={
-                        <Link to="/resume" className='link' onClick={() => {menuButtonClick()} }>
-                            <h2 className='link'>Resume</h2>
+                        <Link to="/resume" className='link-element' onClick={() => {menuButtonClick()} }>
+                            <div className='link-container' style={{height: '100%'}}><h2 className='link-text'>Resume</h2></div>
                         </Link>}/>
                 </animated.div>
             </div>
