@@ -59,49 +59,61 @@ export default function Home() {
                         </div>
                     </header>
                     
-                    <div className ="page-body">
+                    <div className ="home-body">
                         <div className="section-grid" ref={projectRef}>
                             <div>
-                                <div class="section-info">
-                                    <h1> title </h1>
-                                </div>
+                                <h1>text</h1>
+                                <div className='border-line'></div>
+                            </div>
+                            <div className='section-grid-item'>
+                                    <AnimatedSection 
+                                        title="Webpage development & design for Rajaton Taide -festival"
+                                        delay={0}
+                                        image={rajatonCollage}
+                                        threshold={0.5}
+                                    />
+                            </div>
+
+                            <div className='section-grid-item'>
                                 <AnimatedSection 
-                                    title="Webpage development & design for Rajaton Taide -festival"
-                                    delay={0}
-                                    image={rajatonCollage}
+                                    title="UI dashboard design for a resource management solution" 
+                                    delay={500}
+                                    image={dashboardCollage}
                                     threshold={0.5}
                                 />
                             </div>
-                            <AnimatedSection 
-                                title="UI dashboard design for a resource management solution" 
-                                delay={500}
-                                image={dashboardCollage}
-                                threshold={0.5}
-                            />
-                            <AnimatedSection 
-                                title="Earthpeople: Gamified app for sustainability"
-                                delay={200}
-                                image={earthPeopleCollage}
-                                threshold={0.3}
-                            />
-                            <AnimatedSection 
-                                title="Thesis: Learnability Evaluation of Glue VR app"
-                                delay={700}
-                                image={thesisFrontpage}
-                                threshold={0.3}
-                            />
-                            <AnimatedSection 
-                                title="BarrelRoll: 2D space shooter"
-                                delay={200}
-                                video={barrelrollDemo}
-                                threshold={0.3}
-                            />
-                            <AnimatedSection 
-                                title="SoundScape: VR musical playground"
-                                delay={700}
-                                video={soundscapeDemo}
-                                threshold={0.3}
-                            />
+                            <div className='section-grid-item'>
+                                <AnimatedSection 
+                                    title="Earthpeople: Gamified app for sustainability"
+                                    delay={200}
+                                    image={earthPeopleCollage}
+                                    threshold={0.3}
+                                />
+                            </div>
+                            <div className='section-grid-item'>
+                                <AnimatedSection 
+                                    title="Thesis: Learnability Evaluation of Glue VR app"
+                                    delay={700}
+                                    image={thesisFrontpage}
+                                    threshold={0.3}
+                                />
+                            </div>
+                            <div className='section-grid-item'>
+                                <AnimatedSection 
+                                    title="BarrelRoll: 2D space shooter"
+                                    delay={200}
+                                    video={barrelrollDemo}
+                                    threshold={0.3}
+                                />
+                            </div>
+                            <div className='section-grid-item'>
+                                <AnimatedSection 
+                                    title="SoundScape: VR musical playground"
+                                    delay={700}
+                                    video={soundscapeDemo}
+                                    threshold={0.3}
+                                />
+                            </div>
                             
                             
                         </div>

@@ -1,17 +1,33 @@
 .section-grid{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px; 
+    box-sizing: border-box;
     justify-content: center;
-
+    align-items: center;
 }
 
-.page-body {
-
+.home-body {
 }
 
 .section-info {
-    
+    display: flex;
+}
+
+.border-line {
+    min-height: 20px;
+    border-left: solid;
+    max-width: 1px !important;
+}
+
+.section-grid-item {
+    width: 80%;
+    max-height: 80vh;
+    box-sizing: border-box;
+    flex: 1 1 100%;
+    min-height: 0;
+    min-width: 0;
+    display: flex;
 }
 
 .bio-container {

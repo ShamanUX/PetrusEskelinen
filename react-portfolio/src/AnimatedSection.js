@@ -42,21 +42,23 @@ export default function AnimatedSection(props)
         <animated.div className='section-container'  style={{...springs}}  ref={sectionRef} >
             <animated.h1 className={'section-text'}>{props.title}</animated.h1>
 
-            <div className='media-container'>
-                {props.image ? 
-                    <img src={props.image} className='section-media' ></img>
-                    :
-                    null
-                }   
-                
-                {/* If a video prop exists, display the video element. */}
-                {props.video ? 
-                    <video autoPlay loop muted className='section-media' style={{borderRadius: "20px"}}>
-                        <source src={props.video} type="video/mp4" />
-                    </video> 
-                    :
-                    null
-                }
+            <div className='media-container'> 
+                <div className='media-wrapper' >
+                    {props.image ? 
+                        <img src={props.image} className='section-media' ></img>
+                        :
+                        null
+                    }   
+                    
+                    {/* If a video prop exists, display the video element. */}
+                    {props.video ? 
+                        <video autoPlay loop muted className='section-media' style={{borderRadius: "20px"}}>
+                            <source src={props.video} type="video/mp4" />
+                        </video> 
+                        :
+                        null
+                    }
+                </div>
             </div>
         </animated.div>
     )
