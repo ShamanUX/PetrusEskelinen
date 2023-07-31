@@ -38,8 +38,6 @@ function Burger(props) {
     useEffect( () => {
         if  (burgerClicked) { // Burger is now closed
 
-            
-
             api.start({
                 from: {borderRadius: "0% 50% 0% 0%"},
                 to: {borderRadius: "0% 0% 0% 0%"},

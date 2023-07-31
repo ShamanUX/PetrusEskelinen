@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Crudex';
+    src: url('./fonts/Crudex.otf');
+  }
+
+.button {
+    border-radius: 50%;
+}
+
+.button-label {
+    font-family: 'Crudex';
+    rotate: 4deg;
+    font-size: 30px;
+    padding: 10px;
+}
+
 .section-grid{
     display: flex;
     flex-direction: column;
@@ -59,6 +75,7 @@
 .portrait {
     height: 100%;
     max-width: 30%;
+    min-width:29%;
     object-fit: contain;
     border-radius: 20px;
 }

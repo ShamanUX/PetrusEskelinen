@@ -2,9 +2,9 @@ import './Home.css'
 import "./styles.css"
 import Carousel from "./Carousel";
 import  EmblaCarousel  from './EmblaCarousel';
-import { useRef } from 'react';
-import Zoom from 'react-medium-image-zoom'
+import { useRef, useEffect } from 'react';
 
+import Footer from './Footer';
 import Burger from './Burger';
 import AnimatedSection from "./AnimatedSection";
 import rajatonCollage from "./images/Rajatontaidecollage.png"
@@ -13,7 +13,7 @@ import barrelrollDemo from "./videos/Barrelroll\ demo.mp4"
 import soundscapeDemo from "./videos/Soundscape\ demo.mp4"
 import earthPeopleCollage from "./images/EarthPeopleCollage.png"
 import thesisFrontpage from "./images/ThesisFrontpage.png"
-import portrait from './images/pe1.jpg'
+import portrait from './images/pe1small.jpg'
 import downarrow from './images/icons/down-arrow.png'
 
 const OPTIONS = { loop: true, dragFree: true,}
@@ -24,7 +24,16 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function Home() {
     const projectRef = useRef(null);
 
-    const executeScroll = () => projectRef.current.scrollIntoView({ behavior: "smooth" })
+    useEffect( () => {
+        window.scrollTo(0,0);
+    })
+
+    const executeScroll = () => projectRef.current.scrollIntoView({
+        block: "start",
+      inline: "center",
+      behavior: "smooth",
+      alignToTop: true
+    })
 
     const SectionInfo = (props) => {
         return(
@@ -50,11 +59,11 @@ export default function Home() {
                             <h1 style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
                             { /* <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/> */ }
                             <div className='bio-container'>
-                                <img className="portrait" src={portrait}/>
+                                <img className="portrait" src={portrait} loading="eager"/>
                                 <div className='portrait-items'>
                                     <h2> I'm Petrus, and I warmly welcome you to my portfolio!</h2>
                                     <div className='button-and-arrow'>
-                                        <button onClick={executeScroll}>Check out my projects! </button>
+                                        <button className='button' onClick={executeScroll}><h3 className='button-label'>Check out my projects!</h3> </button>
                                         <img src={downarrow}/>
                                     </div>
                                 </div>
@@ -74,7 +83,7 @@ export default function Home() {
                                     <AnimatedSection 
                                         delay={0}
                                         image={rajatonCollage}
-                                        threshold={0.5}
+                                        threshold={0.3}
                                     />
                             </div>
 
@@ -88,7 +97,7 @@ export default function Home() {
                                 <AnimatedSection 
                                     delay={0}
                                     image={dashboardCollage}
-                                    threshold={0.5}
+                                    threshold={0.3}
                                 />
                             </div>
 
@@ -150,7 +159,8 @@ export default function Home() {
                             
                         </div>
                     </div>
-                    </div>
+                    <Footer></Footer>
+                </div>
             </>
     )
 }

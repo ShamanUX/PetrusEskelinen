@@ -5,7 +5,7 @@ import { InView, defaultFallbackInView, useInView } from 'react-intersection-obs
 import { easings } from '@react-spring/web'
 import rajatonCollage from './images/Rajatontaidecollage.png' 
 import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import './react-medium-styles.css'
 
 
 export default function AnimatedSection(props) 
@@ -16,7 +16,11 @@ export default function AnimatedSection(props)
         from: {x:0, opacity: 0}
     }))
     
-    
+    const [isLarge, setIsLarge] = useState(false);
+
+    const handleClick= () => {
+        setIsLarge(!isLarge);
+    }
 
     const handleVisibilityChange = (inView) => {
         if (inView) {
@@ -47,26 +51,37 @@ export default function AnimatedSection(props)
                 :
                 null}
             
-            <Zoom>
+                
                 <div className='media-container'> 
                     <div className='media-wrapper' >
-                        {props.image ? 
-                            <img src={props.image} className='section-media' ></img>
-                            :
-                            null
-                        }   
+                        
+                            {props.image ? 
+                                <Zoom>
+                                    <div><img src={props.image} className='section-image' loading='lazy'></img></div>
+                                </Zoom>
+                                :
+                                null
+                            }   
                         
                         {/* If a video prop exists, display the video element. */}
                         {props.video ? 
-                            <video autoPlay loop muted className='section-media' style={{borderRadius: "20px"}}>
-                                <source src={props.video} type="video/mp4" />
-                            </video> 
+                            <div className={`video-container ${isLarge ? 'large' : ''}`} onClick={handleClick}>  
+                                <video 
+                                autoPlay loop muted 
+                                className='section-video' 
+                                style={{borderRadius: "20px"}}
+                                >
+                                    <source src={props.video} type="video/mp4" />
+                                </video> 
+                            </div>
                             :
                             null
-                        }
+                            }
+                        
+                        
                     </div>
                 </div>
-            </Zoom>
+            
         </animated.div>
     )
 }

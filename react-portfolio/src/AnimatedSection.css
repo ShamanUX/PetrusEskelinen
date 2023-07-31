@@ -30,11 +30,44 @@
     height: 100% !important;
 }
 
-.section-media {
+.section-image {
    max-width: 80%;
    max-height: 100% !important;
    object-fit: contain;
 }
+
+.video-container {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.video-overlay video {
+    max-width: 80%; /* Set the size of the enlarged video */
+    z-index: 2;
+  }
+
+.video-container.large {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensures the enlarged video is on top of other elements */
+}
+
+.section-video {
+    max-width: 80%;
+    max-height: 100% !important;
+    object-fit: contain;
+ }
+
+
 
 @media (max-width: 500px) {
     .section-container{
