@@ -2,9 +2,8 @@ import './Home.css'
 import "./styles.css"
 import Carousel from "./Carousel";
 import  EmblaCarousel  from './EmblaCarousel';
-import AnimatedBlock from './AnimatedBlock';
-import App from './SlickSlider.js'
 import { useRef } from 'react';
+import Zoom from 'react-medium-image-zoom'
 
 import Burger from './Burger';
 import AnimatedSection from "./AnimatedSection";
@@ -14,14 +13,6 @@ import barrelrollDemo from "./videos/Barrelroll\ demo.mp4"
 import soundscapeDemo from "./videos/Soundscape\ demo.mp4"
 import earthPeopleCollage from "./images/EarthPeopleCollage.png"
 import thesisFrontpage from "./images/ThesisFrontpage.png"
-import csharp from './images/c-sharp logo.png'
-import webdev from './images/html5-logo-31816.png'
-import python from './images/Python-Logo.png'
-import unity from './images/unitylogo.png'
-import sql from './images/sql.png'
-import node from './images/nodejs-1-logo.png'
-import figma from './images/Figma-1-logo.png'
-import reactlogo from  './images/reactlogo.svg';
 import portrait from './images/pe1.jpg'
 import downarrow from './images/icons/down-arrow.png'
 
@@ -35,12 +26,26 @@ export default function Home() {
 
     const executeScroll = () => projectRef.current.scrollIntoView({ behavior: "smooth" })
 
+    const SectionInfo = (props) => {
+        return(
+        <div className='section-info-container'>
+            <h1> {props.title} </h1>
+            <div className='section-info'>
+                <div className='border-line'/>
+                <div className='section-details'>
+                    {props.tech ? <h3> {props.tech}</h3> : null}
+                    <h3> {props.role}</h3>
+                </div>
+            </div>
+        </div>
+    )
+    }
+
     return(
             <>
                 <Burger/>
                 <div>
                     <header>
-                        
                         <div className='header-content'>
                             <h1 style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
                             { /* <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/> */ }
@@ -53,63 +58,90 @@ export default function Home() {
                                         <img src={downarrow}/>
                                     </div>
                                 </div>
-                                
-                                
                             </div>
                         </div>
                     </header>
                     
                     <div className ="home-body">
                         <div className="section-grid" ref={projectRef}>
-                            <div>
-                                <h1>text</h1>
-                                <div className='border-line'></div>
-                            </div>
+                            <SectionInfo
+                                title="'Rajaton Taide' Music Festival" 
+                                tech='Technologies: HTML, CSS, JS'
+                                role='Role: Web design and development'
+                            />
+
                             <div className='section-grid-item'>
                                     <AnimatedSection 
-                                        title="Webpage development & design for Rajaton Taide -festival"
                                         delay={0}
                                         image={rajatonCollage}
                                         threshold={0.5}
                                     />
                             </div>
 
+                            <SectionInfo
+                                title='Qaia asset management solution'
+                                tech='Technologies: Figma'
+                                role='Role: UI design'
+                            />
+
                             <div className='section-grid-item'>
                                 <AnimatedSection 
-                                    title="UI dashboard design for a resource management solution" 
-                                    delay={500}
+                                    delay={0}
                                     image={dashboardCollage}
                                     threshold={0.5}
                                 />
                             </div>
+
+                            <SectionInfo
+                                title='Earthpeople: Gamified app for sustainability'
+                                tech='Technologies: Figma'
+                                role='Role: Concept ideation, UI & Experience design'
+                            />
+
                             <div className='section-grid-item'>
                                 <AnimatedSection 
-                                    title="Earthpeople: Gamified app for sustainability"
-                                    delay={200}
+                                    delay={0}
                                     image={earthPeopleCollage}
                                     threshold={0.3}
                                 />
                             </div>
+
+                            <SectionInfo
+                                title="Master's thesis - Learnability evaluation of VR applications"
+                                role="Roles: Evaluation moderation, design, research & analysis"
+                            />
+
                             <div className='section-grid-item'>
                                 <AnimatedSection 
-                                    title="Thesis: Learnability Evaluation of Glue VR app"
-                                    delay={700}
+                                    delay={0}
                                     image={thesisFrontpage}
                                     threshold={0.3}
                                 />
                             </div>
+
+                            <SectionInfo
+                                title="BarrelRoll: 2D space shooter"
+                                tech="Technologies: Unity, C#"
+                                role="Roles: Game logic programming"
+                            />
+
                             <div className='section-grid-item'>
                                 <AnimatedSection 
-                                    title="BarrelRoll: 2D space shooter"
-                                    delay={200}
+                                    delay={0}
                                     video={barrelrollDemo}
                                     threshold={0.3}
                                 />
                             </div>
+
+                            <SectionInfo
+                                title="SoundScape: VR musical playground"
+                                tech="Technologies: Unity, C#"
+                                role="Roles: Programming, Sound design, Concept ideation"
+                            />
+
                             <div className='section-grid-item'>
                                 <AnimatedSection 
-                                    title="SoundScape: VR musical playground"
-                                    delay={700}
+                                    delay={0}
                                     video={soundscapeDemo}
                                     threshold={0.3}
                                 />

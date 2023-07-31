@@ -53,7 +53,7 @@ export default function Resume()
     return(
         <div>
             <Burger/>
-            <div className="page-body">
+            <div className="resume-body">
                 <h1> Resume </h1>
     
                 <h2> Master of Technology - Tampere University (2023) </h2>

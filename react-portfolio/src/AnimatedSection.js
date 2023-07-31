@@ -4,6 +4,8 @@ import {useEffect, useRef, useState} from 'react';
 import { InView, defaultFallbackInView, useInView } from 'react-intersection-observer';
 import { easings } from '@react-spring/web'
 import rajatonCollage from './images/Rajatontaidecollage.png' 
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 
 export default function AnimatedSection(props) 
@@ -40,26 +42,31 @@ export default function AnimatedSection(props)
 
     return(
         <animated.div className='section-container'  style={{...springs}}  ref={sectionRef} >
-            <animated.h1 className={'section-text'}>{props.title}</animated.h1>
-
-            <div className='media-container'> 
-                <div className='media-wrapper' >
-                    {props.image ? 
-                        <img src={props.image} className='section-media' ></img>
-                        :
-                        null
-                    }   
-                    
-                    {/* If a video prop exists, display the video element. */}
-                    {props.video ? 
-                        <video autoPlay loop muted className='section-media' style={{borderRadius: "20px"}}>
-                            <source src={props.video} type="video/mp4" />
-                        </video> 
-                        :
-                        null
-                    }
+            {props.title ? 
+                <animated.h1 className={'section-text'}>{props.title}</animated.h1>
+                :
+                null}
+            
+            <Zoom>
+                <div className='media-container'> 
+                    <div className='media-wrapper' >
+                        {props.image ? 
+                            <img src={props.image} className='section-media' ></img>
+                            :
+                            null
+                        }   
+                        
+                        {/* If a video prop exists, display the video element. */}
+                        {props.video ? 
+                            <video autoPlay loop muted className='section-media' style={{borderRadius: "20px"}}>
+                                <source src={props.video} type="video/mp4" />
+                            </video> 
+                            :
+                            null
+                        }
+                    </div>
                 </div>
-            </div>
+            </Zoom>
         </animated.div>
     )
 }
