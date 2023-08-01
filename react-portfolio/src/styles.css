@@ -13,6 +13,8 @@ some properties of a button*/
 body {
     color: #fafafa;
     background-color: #002133;
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 500px) {

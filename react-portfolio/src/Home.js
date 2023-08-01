@@ -55,114 +55,116 @@ export default function Home() {
     return(
             <>
                 <Burger/>
-                <div>
+                
                     <header>
                         <div className='header-content'>
                             <h1 style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
                             { /* <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/> */ }
-                            <div className='header-image-container'>
-                                <img className='collage' src={CollageOfAll}/>
-                            </div>
-                            <div className='portrait-items'>
-                                    
-                                    <div className='button-and-arrow'>
-                                        <button className='button' onClick={executeScroll}><h3 className='button-label'>Check out my projects!</h3> </button>
-                                        <img src={downarrow}/>
-                                    </div>
+                            <div className='image-content-flex'>
+                                <div className='header-image-container'>
+                                    <div className='image-wrapper'><img className='header-image' src={CollageOfAll}/></div>
                                 </div>
-                        </div>
+                                <div className='portrait-items'>
+                                        
+                                        <div className='button-and-arrow'>
+                                            <button className='button' onClick={executeScroll}><h3 className='button-label'>Check out my projects!</h3> </button>
+                                            <img src={downarrow}/>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
                     </header>
-                    
-                    <div className ="home-body">
-                        <div className="section-grid" ref={projectRef}>
-                            <SectionInfo
-                                title="'Rajaton Taide' Music Festival" 
-                                tech='Technologies: HTML, CSS, JS'
-                                role='Role: Web design and development'
-                            />
+                
+                <div className ="home-body">
+                    <div className="section-grid" ref={projectRef}>
+                        <SectionInfo
+                            title="'Rajaton Taide' Music Festival" 
+                            tech='Technologies: HTML, CSS, JS'
+                            role='Role: Web design and development'
+                        />
 
-                            <div className='section-grid-item'>
-                                    <AnimatedSection 
-                                        delay={0}
-                                        image={rajatonCollage}
-                                        threshold={0.3}
-                                    />
-                            </div>
-
-                            <SectionInfo
-                                title='Qaia asset management solution'
-                                tech='Technologies: Figma'
-                                role='Role: UI design'
-                            />
-
-                            <div className='section-grid-item'>
+                        <div className='section-grid-item'>
                                 <AnimatedSection 
                                     delay={0}
-                                    image={dashboardCollage}
+                                    image={rajatonCollage}
                                     threshold={0.3}
                                 />
-                            </div>
-
-                            <SectionInfo
-                                title='Earthpeople: Gamified app for sustainability'
-                                tech='Technologies: Figma'
-                                role='Role: Concept ideation, UI & Experience design'
-                            />
-
-                            <div className='section-grid-item'>
-                                <AnimatedSection 
-                                    delay={0}
-                                    image={earthPeopleCollage}
-                                    threshold={0.3}
-                                />
-                            </div>
-
-                            <SectionInfo
-                                title="Master's thesis - Learnability evaluation of VR applications"
-                                role="Roles: Evaluation moderation, design, research & analysis"
-                            />
-
-                            <div className='section-grid-item'>
-                                <AnimatedSection 
-                                    delay={0}
-                                    image={thesisFrontpage}
-                                    threshold={0.3}
-                                />
-                            </div>
-
-                            <SectionInfo
-                                title="BarrelRoll: 2D space shooter"
-                                tech="Technologies: Unity, C#"
-                                role="Roles: Game logic programming"
-                            />
-
-                            <div className='section-grid-item'>
-                                <AnimatedSection 
-                                    delay={0}
-                                    video={barrelrollDemo}
-                                    threshold={0.3}
-                                />
-                            </div>
-
-                            <SectionInfo
-                                title="SoundScape: VR musical playground"
-                                tech="Technologies: Unity, C#"
-                                role="Roles: Programming, Sound design, Concept ideation"
-                            />
-
-                            <div className='section-grid-item'>
-                                <AnimatedSection 
-                                    delay={0}
-                                    video={soundscapeDemo}
-                                    threshold={0.3}
-                                />
-                            </div>
-                            
-                            
                         </div>
+
+                        <SectionInfo
+                            title='Qaia asset management solution'
+                            tech='Technologies: Figma'
+                            role='Role: UI design'
+                        />
+
+                        <div className='section-grid-item'>
+                            <AnimatedSection 
+                                delay={0}
+                                image={dashboardCollage}
+                                threshold={0.3}
+                            />
+                        </div>
+
+                        <SectionInfo
+                            title='Earthpeople: Gamified app for sustainability'
+                            tech='Technologies: Figma'
+                            role='Role: Concept ideation, UI & Experience design'
+                        />
+
+                        <div className='section-grid-item'>
+                            <AnimatedSection 
+                                delay={0}
+                                image={earthPeopleCollage}
+                                threshold={0.3}
+                            />
+                        </div>
+
+                        <SectionInfo
+                            title="Master's thesis - Learnability evaluation of VR applications"
+                            role="Roles: Evaluation moderation, design, research & analysis"
+                        />
+
+                        <div className='section-grid-item'>
+                            <AnimatedSection 
+                                delay={0}
+                                image={thesisFrontpage}
+                                threshold={0.3}
+                            />
+                        </div>
+
+                        <SectionInfo
+                            title="BarrelRoll: 2D space shooter"
+                            tech="Technologies: Unity, C#"
+                            role="Roles: Game logic programming"
+                        />
+
+                        <div className='section-grid-item'>
+                            <AnimatedSection 
+                                delay={0}
+                                video={barrelrollDemo}
+                                threshold={0.3}
+                            />
+                        </div>
+
+                        <SectionInfo
+                            title="SoundScape: VR musical playground"
+                            tech="Technologies: Unity, C#"
+                            role="Roles: Programming, Sound design, Concept ideation"
+                        />
+
+                        <div className='section-grid-item'>
+                            <AnimatedSection 
+                                delay={0}
+                                video={soundscapeDemo}
+                                threshold={0.3}
+                            />
+                        </div>
+                        
+                        
                     </div>
-                    <Footer></Footer>
                 </div>
+                <Footer></Footer>
+                
             </>
     )
 }
