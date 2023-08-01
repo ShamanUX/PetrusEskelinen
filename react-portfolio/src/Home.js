@@ -4,6 +4,8 @@ import Carousel from "./Carousel";
 import  EmblaCarousel  from './EmblaCarousel';
 import { useRef, useEffect } from 'react';
 
+
+import  CollageOfAll from './images/CollageofAll.png'
 import Footer from './Footer';
 import Burger from './Burger';
 import AnimatedSection from "./AnimatedSection";
@@ -58,16 +60,16 @@ export default function Home() {
                         <div className='header-content'>
                             <h1 style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
                             { /* <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/> */ }
-                            <div className='bio-container'>
-                                <img className="portrait" src={portrait} loading="eager"/>
-                                <div className='portrait-items'>
-                                    <h2> I'm Petrus, and I warmly welcome you to my portfolio!</h2>
+                            <div className='header-image-container'>
+                                <img className='collage' src={CollageOfAll}/>
+                            </div>
+                            <div className='portrait-items'>
+                                    
                                     <div className='button-and-arrow'>
                                         <button className='button' onClick={executeScroll}><h3 className='button-label'>Check out my projects!</h3> </button>
                                         <img src={downarrow}/>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </header>
                     

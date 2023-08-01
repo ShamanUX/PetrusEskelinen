@@ -63,13 +63,15 @@
     display: flex;
 }
 
-.bio-container {
-    flex-grow: 1;
+.header-image-container {
+    flex: 1;
     display: flex;
     flex-direction: row;
     gap: 40px;
     width: 80%;
     margin: 0 auto;
+    min-width: 0;
+    max-height: 100%;
 }
 
 .portrait {
@@ -80,25 +82,36 @@
     border-radius: 20px;
 }
 
+.collage {
+    max-width: 100%;
+    min-width: 100% ;
+}
+
 .portrait-items {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
-    width: 100%
+    flex: 2;
+    width: 100%;
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
     max-height: 100%;
-    max-width: 100%;
-    padding: 60px;
+    width: 80%;
+    
     gap: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: top;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 header{
     width: 100%;
+    max-height: 100vh;
     height: 100vh;
 }
 
@@ -106,6 +119,14 @@ header{
     display: flex;
     flex-direction: row;
     align-items: top;
+    min-width: 0;
+    max-height: 100%;
+}
+
+.button-and-arrow img {
+    min-width: 40%;
+    min-height: 0;
+    flex: 1
 }
 
 
