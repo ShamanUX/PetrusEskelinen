@@ -4,7 +4,6 @@ import Carousel from "./Carousel";
 import  EmblaCarousel  from './EmblaCarousel';
 import { useRef, useEffect } from 'react';
 
-
 import  CollageOfAll from './images/CollageofAll.png'
 import Footer from './Footer';
 import Burger from './Burger';
