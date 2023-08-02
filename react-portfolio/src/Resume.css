@@ -13,15 +13,15 @@
 }
 
 .jobsection{
-    background: linear-gradient(to right, #0b8107 75%, rgba(0, 0, 0, 0) );
+    background: linear-gradient(to right,rgba(117, 19, 93, 0.9), rgba(0, 0, 0, 0) );
     padding: 1px 15px 10px 15px;
     margin: 0;
-    max-width: 60%;
+    max-width: 80%;
 }
 
 .jobsection p, h3
  {
-    max-width: 90%;
+    max-width: 60%;
 }
 
 .job-container {
@@ -41,6 +41,7 @@
 @media (max-width: 1024px) {
     .jobsection {
         max-width: 100%;
-        background: linear-gradient(45deg, #0b8107 50%, #0b8107c5 90%, #0b8107c5 );
+        background: linear-gradient(to right, rgba(117, 19, 93, 0.73) 45%, #eeeeee00);
+        
     }
 }
