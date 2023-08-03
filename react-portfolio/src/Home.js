@@ -73,7 +73,7 @@ export default function Home() {
                             <div className='image-content-flex'>
                                 <div className='header-image-container '>
                                     <div className='image-wrapper '>
-                                        <img className='header-image' src={CollageOfAll}/>
+                                        <img className='header-image' src={CollageOfAll} alt="Portfolio collage"/>
                                     </div>
                                 </div>
                                 <div className='portrait-items'>
@@ -101,6 +101,7 @@ export default function Home() {
                                     delay={0}
                                     image={rajatonCollage}
                                     threshold={0.3}
+                                    alt={"UI Designs for Rajaton Taide"}
                                 />
                         </div>
 
@@ -115,6 +116,7 @@ export default function Home() {
                                 delay={0}
                                 image={dashboardCollage}
                                 threshold={0.3}
+                                alt={"UI Designs for Qaia Asset Management"}
                             />
                         </div>
 
@@ -129,6 +131,7 @@ export default function Home() {
                                 delay={0}
                                 image={earthPeopleCollage}
                                 threshold={0.3}
+                                alt={"UI Designs for Eartpeople"}
                             />
                         </div>
 
@@ -142,6 +145,7 @@ export default function Home() {
                                 delay={0}
                                 image={thesisFrontpage}
                                 threshold={0.3}
+                                alt={"Petrus's Thesis Front page"}
                             />
                         </div>
 

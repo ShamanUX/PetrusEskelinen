@@ -45,6 +45,7 @@ header:after {
 .header-title  {
     height: 10%;
     z-index: 4;
+    padding-top: 20px;
 }
 
 .image-content-flex {
@@ -221,9 +222,28 @@ and (orientation: portrait) {
 
     .image-content-flex {
         flex-direction: row;
+        width: 100%;
+        align-items: top;
+        justify-content: top;
+        height: 95%;
     }
+
+    .header-title {
+        height: 5%;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+.button-label {
+    font-size: 24px;
+}
+
     .header-image-container {
-        width: 100%
+        width: 60%
+    }
+    .portrait-items {
+        width: 15%;
+        min-width: 0;
     }
     header {
         min-height: 100vh;

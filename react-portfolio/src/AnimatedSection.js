@@ -57,7 +57,7 @@ export default function AnimatedSection(props)
                         
                             {props.image ? 
                                 <Zoom>
-                                    <div><img src={props.image} className='section-image' loading='lazy'></img></div>
+                                    <div><img src={props.image} className='section-image' loading='lazy' alt={props.alt}></img></div>
                                 </Zoom>
                                 :
                                 null
