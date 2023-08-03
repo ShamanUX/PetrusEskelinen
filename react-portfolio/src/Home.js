@@ -2,7 +2,8 @@ import './Home.css'
 import "./styles.css"
 import Carousel from "./Carousel";
 import  EmblaCarousel  from './EmblaCarousel';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import TextTransition, { presets } from 'react-text-transition';
 
 import  CollageOfAll from './images/CollageofAll.png'
 import Footer from './Footer';
@@ -25,9 +26,20 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function Home() {
     const projectRef = useRef(null);
 
+    const TEXTS = ['Innovative', 'User-friendly', 'Responsive',];
+
+    const [index, setIndex] = useState(0);
+
     useEffect( () => {
         window.scrollTo(0,0);
-    })
+        
+        const intervalId = setInterval(
+            () => setIndex((index) => index + 1),
+            3000, // every 3 seconds
+          );
+          return () => clearTimeout(intervalId);
+    }, []
+    )
 
     const executeScroll = () => projectRef.current.scrollIntoView({
         block: "start",
@@ -57,7 +69,12 @@ export default function Home() {
                 
                     <header>
                         <div className='header-content'>
-                            <h1 className='header-title'style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
+                            <h1 className='header-title' style= {{textAlign: 'center'}}>
+                                <TextTransition inline='true' springConfig={presets.stiff}>{TEXTS[index % TEXTS.length]}</TextTransition> 
+                                &nbsp;software development & design </h1>
+                            <h1>
+                                
+                            </h1>
                             { /* <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/> */ }
                             <div className='image-content-flex'>
                                 <div className='header-image-container '>

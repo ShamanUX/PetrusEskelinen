@@ -17,7 +17,7 @@ import docker from './images/docker-logo.png'
 
 
 import {useSpring, animated} from 'react-spring'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { easings } from '@react-spring/web'
 
 
@@ -38,6 +38,8 @@ export default function Resume()
     const [ springs, api] = useSpring(() => ({  
         from: {x:0, opacity: 0}
     }))
+
+
 
     useEffect( () => {
         window.scrollTo(0,0);
