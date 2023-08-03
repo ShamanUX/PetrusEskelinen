@@ -64,7 +64,7 @@ export default function Home() {
                     <header>
                         <div className='header-content'>
                             <h1 className='header-title' style= {{textAlign: 'center'}}>
-                                 <HeadlineTransition/>
+                                <HeadlineTransition/>
                                 &nbsp;software development & design </h1>
                             <h1>
                                 
