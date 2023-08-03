@@ -58,7 +58,7 @@ export default function Resume()
 
     return(
         <div>
-            <Burger/>
+            <Burger page="home"/>
             <div className="resume-body">
                 <div className='resume-content'>
                     <h1> Resume </h1>

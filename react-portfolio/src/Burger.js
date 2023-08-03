@@ -71,7 +71,7 @@ function Burger(props) {
                 }
             })
         }
-    })
+    }, [burgerClicked])
 
     return (
         <animated.div className="burger-implementation" style={{}}>

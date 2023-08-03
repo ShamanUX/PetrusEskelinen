@@ -4,6 +4,7 @@ import Carousel from "./Carousel";
 import  EmblaCarousel  from './EmblaCarousel';
 import { useRef, useEffect, useState } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
+import HeadlineTransition from './HeadlineTransition';
 
 import  CollageOfAll from './images/CollageofAll.png'
 import Footer from './Footer';
@@ -32,14 +33,7 @@ export default function Home() {
 
     useEffect( () => {
         window.scrollTo(0,0);
-        
-        const intervalId = setInterval(
-            () => setIndex((index) => index + 1),
-            3000, // every 3 seconds
-          );
-          return () => clearTimeout(intervalId);
-    }, []
-    )
+    })
 
     const executeScroll = () => projectRef.current.scrollIntoView({
         block: "start",
@@ -70,7 +64,7 @@ export default function Home() {
                     <header>
                         <div className='header-content'>
                             <h1 className='header-title' style= {{textAlign: 'center'}}>
-                                <TextTransition inline='true' springConfig={presets.stiff}>{TEXTS[index % TEXTS.length]}</TextTransition> 
+                                 <HeadlineTransition/>
                                 &nbsp;software development & design </h1>
                             <h1>
                                 
