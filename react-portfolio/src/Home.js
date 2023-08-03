@@ -57,21 +57,24 @@ export default function Home() {
                 
                     <header>
                         <div className='header-content'>
-                            <h1 style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
+                            <h1 className='header-title'style= {{textAlign: 'center'}}> User-friendly software development & design </h1>
                             { /* <EmblaCarousel options={OPTIONS} slides={SLIDES} autoplayOptions={AUTOPLAYOPTIONS}/> */ }
                             <div className='image-content-flex'>
-                                <div className='header-image-container'>
-                                    <div className='image-wrapper'><img className='header-image' src={CollageOfAll}/></div>
+                                <div className='header-image-container '>
+                                    <div className='image-wrapper '>
+                                        <img className='header-image' src={CollageOfAll}/>
+                                    </div>
                                 </div>
                                 <div className='portrait-items'>
-                                        
                                         <div className='button-and-arrow'>
-                                            <button className='button' onClick={executeScroll}><h3 className='button-label'>Check out my projects!</h3> </button>
+                                            <button className='button' onClick={executeScroll}>
+                                                <h3 className='button-label'>Check out my projects!</h3> 
+                                            </button>
                                             <img src={downarrow}/>
                                         </div>
                                     </div>
                             </div>
-                            </div>
+                        </div>
                     </header>
                 
                 <div className ="home-body">
@@ -158,8 +161,6 @@ export default function Home() {
                                 threshold={0.3}
                             />
                         </div>
-                        
-                        
                     </div>
                 </div>
                 <Footer></Footer>

@@ -63,9 +63,7 @@ export default function Resume()
         
                     <h2> Master of Technology - Tampere University (2023) </h2>
         
-                    <p> In my studies at Tuni, I have gained invaluable expertise of various aspects of
-                        software development. I have focused on front-end technologies like React and Wordpress, UX/UI design utilizing
-                        Figma and user testing, and of course a fundamental understanding of full-stack development.
+                    <p> Front-end and full-stack development // UI/UX design and evaluation
                     </p>
         
                     <h2> Technologies </h2>
