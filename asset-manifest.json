@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PetrusEskelinen/static/css/main.40991f7e.css",
+    "main.css": "/PetrusEskelinen/static/css/main.8163ea7e.css",
     "main.js": "/PetrusEskelinen/static/js/main.39f2fd69.js",
     "static/js/787.a2cb61a6.chunk.js": "/PetrusEskelinen/static/js/787.a2cb61a6.chunk.js",
     "static/media/Soundscape demo.mp4": "/PetrusEskelinen/static/media/Soundscape demo.65323bd96158f04e7bcd.mp4",
     "static/media/Barrelroll demo.mp4": "/PetrusEskelinen/static/media/Barrelroll demo.21ece90dd4ec9905824f.mp4",
-    "static/media/treecircuit.png": "/PetrusEskelinen/static/media/treecircuit.5faab415bae4fc0e858d.png",
     "static/media/Dashboardcollage.png": "/PetrusEskelinen/static/media/Dashboardcollage.fffa065f0e6179482848.png",
     "static/media/Rajatontaidecollage.png": "/PetrusEskelinen/static/media/Rajatontaidecollage.83df301bf3731fbaadc4.png",
     "static/media/CollageofAll.png": "/PetrusEskelinen/static/media/CollageofAll.1e5438c2c1f7e8b659dc.png",
     "static/media/EarthPeopleCollage.png": "/PetrusEskelinen/static/media/EarthPeopleCollage.9691e93b88686beedfe5.png",
+    "static/media/treecircuit_comp.jpg": "/PetrusEskelinen/static/media/treecircuit_comp.171ff71219033c0c122d.jpg",
     "static/media/pe1small.jpg": "/PetrusEskelinen/static/media/pe1small.96b52ecf5d7426f507cb.jpg",
     "static/media/ThesisFrontpage.png": "/PetrusEskelinen/static/media/ThesisFrontpage.263041a577c9b161fb80.png",
     "static/media/Crudex.otf": "/PetrusEskelinen/static/media/Crudex.12f7f82053f062a22f02.otf",
@@ -22,12 +22,12 @@
     "static/media/sql.png": "/PetrusEskelinen/static/media/sql.ba628df4785bc11af809.png",
     "static/media/reactlogo.svg": "/PetrusEskelinen/static/media/reactlogo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/PetrusEskelinen/index.html",
-    "main.40991f7e.css.map": "/PetrusEskelinen/static/css/main.40991f7e.css.map",
+    "main.8163ea7e.css.map": "/PetrusEskelinen/static/css/main.8163ea7e.css.map",
     "main.39f2fd69.js.map": "/PetrusEskelinen/static/js/main.39f2fd69.js.map",
     "787.a2cb61a6.chunk.js.map": "/PetrusEskelinen/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40991f7e.css",
+    "static/css/main.8163ea7e.css",
     "static/js/main.39f2fd69.js"
   ]
 }
