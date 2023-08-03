@@ -1,5 +1,5 @@
 .footer {
-    background-color: hsl(201, 31%, 31%);
+    background: linear-gradient(to top, #030933 85%, #002133);
     position: relative;
     padding: 40px;
     box-sizing: border-box;

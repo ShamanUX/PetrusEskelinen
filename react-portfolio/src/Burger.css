@@ -22,7 +22,7 @@
 
 .menu-button-container {
     
-    background-color: green;
+    background-color: #016499;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -48,19 +48,19 @@
 
 .link-element {
     text-decoration: none;
-    background-color: green;
+    background-color:#016499;
     height: 100%;
 }
 
 .link-text {
     padding: 0;
     margin: 0;
-    color: white;
+    color: #fafafa;
     margin: auto auto;
 }
 
 .link-container {
-    background-color: green;
+    background-color: #016499;
     padding: 0 10px 0 10px;
     border-radius: 5px;
     height: 100%;
@@ -69,5 +69,8 @@
 
 .link-text:visited {
     text-decoration: none;
-    color: white;
+}
+
+.link-text:hover {
+    text-decoration: underline;
 }
