@@ -1,24 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css';
-import Resume from './Resume';
-import App from './App';
-import Home from './Home';
-import reportWebVitals from './reportWebVitals';
-import Burger from './Burger';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+import Resume from "./Resume";
+import Home from "./Home";
+import reportWebVitals from "./reportWebVitals";
+import Burger from "./Burger";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-
   <React.StrictMode>
- 
-    <BrowserRouter >
-        <Routes>
-          <Route exact path="/PetrusEskelinen" element={<Home />} />
-          <Route path="/PetrusEskelinen/resume" element={<Resume />} />
-        </Routes> 
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/PetrusEskelinen" element={<Home />} />
+        <Route path="/PetrusEskelinen/resume" element={<Resume />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -1,30 +1,27 @@
 /* fonts */
-
 @import url(https://fonts.bunny.net/css?family=aldrich:400);
 
-
-
 /* This is to give an element the 
-some properties of a button*/ 
+some properties of a button*/
 .div-button {
-    cursor: pointer;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    height: 100%;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  height: 100%;
 }
 
 body {
-    color: #F2F2F2;
-    background-color: #002133;
-    margin: 0;
-    padding: 0;
-    font-family: 'Aldrich', sans-serif;
+  color: #f2f2f2;
+  background-color: #002133;
+  margin: 0;
+  padding: 0;
+  font-family: "Aldrich", sans-serif;
 }
 
 @media (max-width: 500px) {
-    h1 {
-        font-size: 24px;
-    }
+  h1 {
+    font-size: 24px;
+  }
 }

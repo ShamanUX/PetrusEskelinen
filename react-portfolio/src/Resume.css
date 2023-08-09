@@ -1,47 +1,56 @@
 .resume-body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 40px;
 }
 
 .resume-content {
-    width: 80%;
-    margin: 0 auto;
-    flex-grow: 1;
+  width: 80%;
+  margin: 0 auto;
+  flex-grow: 1;
 }
 
-.jobsection{
-    background: linear-gradient(to right,rgba(117, 19, 93, 0.9), rgba(0, 0, 0, 0) );
-    padding: 1px 15px 10px 15px;
-    margin: 0;
-    max-width: 80%;
+/* List of technology logos */
+.logoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
-.jobsection p, h3
- {
-    max-width: 60%;
+/* Job experience listing */
+.jobsection {
+  background: linear-gradient(
+    to right,
+    rgba(117, 19, 93, 0.9),
+    rgba(0, 0, 0, 0)
+  );
+  padding: 1px 15px 10px 15px;
+  margin: 0;
+  max-width: 80%;
+}
+
+.jobsection p,
+h3 {
+  max-width: 60%;
 }
 
 .job-container {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px
-}
-
-.logoList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media (max-width: 1024px) {
-    .jobsection {
-        max-width: 100%;
-        background: linear-gradient(to right, rgba(117, 19, 93, 0.73) 45%, #eeeeee00);
-        
-    }
+  .jobsection {
+    max-width: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(117, 19, 93, 0.73) 45%,
+      #eeeeee00
+    );
+  }
 }

@@ -1,69 +1,67 @@
-.section-container{
-    /*background-color: rgba(127, 255, 212, 0.349);*/
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-height: 100% !important;
-    box-sizing: border-box;
-    min-height: 0;
-    min-width: 0;
-    flex: 1;
+.section-container {
+  /*background-color: rgba(127, 255, 212, 0.349);*/
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-height: 100% !important;
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+  flex: 1;
 }
 
 .media-container {
-    flex-grow: 0;
-    flex-shrink: 1;
-    min-width: 0;
-    min-height: 0;
-    box-sizing: border-box; 
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
 }
 
 .section-text {
-    flex: 1;
+  flex: 1;
 }
 
 .media-wrapper {
-    flex: 1;
-    min-width: 0;
-    height: 100% !important;
+  flex: 1;
+  min-width: 0;
+  height: 100% !important;
 }
 
 .section-image {
-   max-width:100%;
-   max-height: 100% !important;
+  max-width: 100%;
+  max-height: 100% !important;
 }
 
 .video-container {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
 }
 
 .video-container.large {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999; /* Ensures the enlarged video is on top of other elements */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensures the enlarged video is on top of other elements */
 }
 
 .section-video {
-    max-width: 80%;
-    max-height: 100% !important;
- }
-
-
+  max-width: 80%;
+  max-height: 100% !important;
+}
 
 @media (max-width: 500px) {
-    .section-container{
-        flex: 1 1 100%;
-    }
+  .section-container {
+    flex: 1 1 100%;
+  }
 }
